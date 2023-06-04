@@ -7,14 +7,13 @@ import java.util.List;
 public class Booking {
     private Room room;
     private Guest guest;
-    private List<Guest> otherGuests;
+    private List<Guest> otherGuests =new ArrayList<>();
     private LocalDate bookingFrom;
     private LocalDate bookingTo;
 
-    public Booking(Room room, Guest guest, /*List<Guest> otherGuests,*/ LocalDate bookingFrom, LocalDate bookingTo) {
+    public Booking(Room room, Guest guest, LocalDate bookingFrom, LocalDate bookingTo) {
         this.room = room;
         this.guest = guest;
-      //  this.otherGuests = otherGuests;
         this.bookingFrom = bookingFrom;
         this.bookingTo = bookingTo;
     }
@@ -74,8 +73,8 @@ public class Booking {
         else
             for(Guest guest: otherGuests) {
 
-                System.out.println(guest.getSurname()+" "+guest.getSurname()+"  "+getBookingFrom()+"   "+getBookingTo());
-            }
+                System.out.println(guest.getName()+" "+guest.getSurname()+"  "+getBookingFrom()+"   "+getBookingTo());
+          }
 
 
     }
